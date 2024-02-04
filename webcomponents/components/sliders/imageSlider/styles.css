@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.content_container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-left: 15%;
+}
+
+.box{
+    margin: 20vh 0 10vh 0;
+    position: relative;
+    width: 700px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(250deg);
+    transition: 1.5s;
+  }
+  
+  .box::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 700px;
+    height: 500px;
+    background-color: #2225;
+    z-index: 1000;
+    transform: translateY(240px) rotateX(90deg) scale(1.1);
+    filter: blur(40px);
+  }
+  
+  .box .box_card{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("../assets/images/devashi_alloy_and_food_bulk_order_product_bg.png"); */
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(350px);
+  }
+  
+  .box .box_card .imgBx{
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+  
+  .box .box_card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+  }
+  
+  .btns{
+    display: flex;
+    gap: 50px;
+  }
+  
+  .btns div{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .btns div:active{
+    background: #333;
+  }
+  
+  .btns div::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    top:35%;
+    left: 35%;
+    height: 15px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(45deg) translate(-2.5px,2.5px);
+  }
+  
+  .btns div.prev::before{
+    transform: rotate(225deg) translate(-2.5px,2.5px);
+  
+  }
+  
+  .btns div:active::before{
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+  }

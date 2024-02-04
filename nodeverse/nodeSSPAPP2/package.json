@@ -1,0 +1,17 @@
+{
+    "name": "nodeSSOApp2",
+    "version": "1.0.0",
+    "description": "Okta SSO Demo with Express.js",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "Vishal",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.18.2",
+        "express-session": "^1.17.2",
+        "passport": "^0.5.2",
+        "passport-openidconnect": "^0.1.1"
+    }
+}
